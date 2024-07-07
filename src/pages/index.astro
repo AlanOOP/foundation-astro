@@ -1,0 +1,22 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import CustomTitle from "../components/CustomTitle.astro";
+
+const name = "Alan Alexis Hernandez Francisco";
+const title = "Home Page";
+---
+
+<MainLayout title="Home Page">
+  <CustomTitle title={title} />
+
+  <div>
+    <span></span>
+  </div>
+
+  <script>
+    const momentActual = new Date().toLocaleTimeString();
+    const span = document.querySelector("span") as HTMLElement;
+
+    span.innerHTML = momentActual;
+  </script>
+</MainLayout>
